@@ -40,9 +40,13 @@ auto-waiting) sharpens the explanation of Selenium's own behavior.
   element actionability, since this is the most consequential
   practical difference a reader coming from another tool needs to
   know.
-- SKILL.md must link to exactly the three real sibling repos in this
-  family, and must not imply or add a fourth (there is deliberately no
-  NHS Wales variant for this tool+language combination).
+- SKILL.md must link to exactly the four real sibling repos in this
+  family (generic, Google Search, Google Maps, and NHS Wales) and must
+  not imply a different count. The NHS Wales variant
+  (`demo-selenium-typescript-for-nhs-wales`) was added on 2026-09-05,
+  filling what was previously the one gap among all eight
+  tool+language combos in this project — do not describe that gap as
+  still existing.
 - Any mention of the Google-Search or Google-Maps sibling repos must
   carry the Google Terms of Service caveat: those repos are
   illustrative only, not meant for repeated automated querying of the
@@ -56,8 +60,8 @@ auto-waiting) sharpens the explanation of Selenium's own behavior.
 - Every code sample in SKILL.md is valid TypeScript using
   `selenium-webdriver`'s real API and types.
 - Every linked sibling repo URL resolves.
-- Exactly three sibling repos are linked, matching the real family (no
-  NHS Wales variant).
+- Exactly four sibling repos are linked, matching the real family
+  (generic, Google Search, Google Maps, NHS Wales).
 - The Google ToS caveat appears wherever the two Google-targeting
   sibling repos are mentioned.
 - SKILL.md explicitly contrasts a walkthrough script with a real Mocha

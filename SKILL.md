@@ -16,13 +16,15 @@ TypeScript uses the same npm package as JavaScript:
 
 ```sh
 npm install selenium-webdriver
+npm install --save-dev @types/selenium-webdriver typescript ts-node @types/node
 ```
 
-Modern versions of `selenium-webdriver` ship their own `.d.ts` type
-declarations — you do **not** need to also install
-`@types/selenium-webdriver`. Older tutorials still reference that separate
-types package; it is unnecessary today and can even conflict with the
-types bundled in the package itself.
+`selenium-webdriver`'s own `package.json` carries no `types`/`typings`
+field — it does **not** ship its own `.d.ts` declarations, so the
+community `@types/selenium-webdriver` package is genuinely required for
+TypeScript, not a legacy leftover. (Verified directly against the npm
+registry, and matches the real `demo-selenium-typescript` sibling repo's
+own `package.json`.)
 
 ### Browser driver setup
 
@@ -273,11 +275,13 @@ Sibling demo repos in this same project family, all under the
   — same patterns against Google Search (illustrative only).
 - [demo-selenium-typescript-for-google-maps](https://github.com/testingexamples/demo-selenium-typescript-for-google-maps)
   — same patterns against Google Maps (illustrative only).
-
-There is deliberately **no** Selenium+TypeScript-for-nhs-wales sibling
-repo in this family — unlike the other seven tool+language combos in
-this project, only these three sibling repos exist for
-Selenium+TypeScript.
+- [demo-selenium-typescript-for-nhs-wales](https://github.com/testingexamples/demo-selenium-typescript-for-nhs-wales)
+  — a real test suite with real assertions against
+  [https://www.nhs.wales/](https://www.nhs.wales/) (home page title, an
+  "About Us" page title/headline, and search results content). This was
+  the last gap in the demo repo family — Selenium+TypeScript was the one
+  tool+language combo without an NHS Wales variant until this repo was
+  added.
 
 **Caveat:** Google's Terms of Service restrict automated querying of
 Google Search and Google Maps. The two Google-targeting sibling repos
