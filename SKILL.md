@@ -140,7 +140,7 @@ async function demo(): Promise<void> {
         .build();
 
     try {
-        await driver.get("https://testingexamples.github.io");
+        await driver.get("https://testingexamples.github.io/en-001/practice/");
 
         // Find an element by id.
         const elementById: WebElement = await driver.findElement(By.id("id-example-1"));
@@ -217,7 +217,7 @@ describe('testingexamples.github.io fixtures', function () {
   after(async () => { await driver.quit(); });
 
   it('id-example-1 has the expected text', async () => {
-    await driver.get('https://testingexamples.github.io');
+    await driver.get('https://testingexamples.github.io/en-001/practice/');
     const element = await driver.findElement(By.id('id-example-1'));
     const text: string = await element.getText();
     assert.strictEqual(text, 'Id Example 1');
@@ -269,7 +269,7 @@ Sibling demo repos in this same project family, all under the
 
 - [demo-selenium-typescript](https://github.com/testingexamples/demo-selenium-typescript)
   — locator-strategy walkthrough against
-  [https://testingexamples.github.io](https://testingexamples.github.io)
+  [https://testingexamples.github.io/en-001/practice/](https://testingexamples.github.io/en-001/practice/)
   (the generic target; free to run against repeatedly).
 - [demo-selenium-typescript-for-google-search](https://github.com/testingexamples/demo-selenium-typescript-for-google-search)
   — same patterns against Google Search (illustrative only).
@@ -291,7 +291,7 @@ to be run repeatedly against the live sites.
 Further reading:
 
 - [Selenium WebDriver documentation](https://www.selenium.dev/documentation/webdriver/)
-- [https://testingexamples.github.io/](https://testingexamples.github.io/)
+- [https://testingexamples.github.io/en-001/practice/](https://testingexamples.github.io/en-001/practice/)
   — the free fixture page these demos target, safe to run against
   repeatedly.
 
